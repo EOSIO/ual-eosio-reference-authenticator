@@ -25,7 +25,7 @@ This authenticator is meant to be used with [Universal Authenticator Library](ht
 
 ```javascript
 import { EOSIOAuth } from '@blockone/ual-eosio-reference-authenticator'
-import { UALProvider, withUAL } from '@blockone/universal-authenticator-library-react-js-renderer'
+import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
 
 const exampleNet = {
   chainId: '',
