@@ -4,7 +4,7 @@ import {
   SignatureProviderInterfaceParams,
 } from '@blockone/eosjs-signature-provider-interface'
 
-export const Name = 'EOSIO Reference Authenticator'
+export const Name = 'EOSIO Auth'
 
 export type SignatureProviderInterfaceClass =
   new (params: SignatureProviderInterfaceParams) => SignatureProviderInterface
