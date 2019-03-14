@@ -1,0 +1,72 @@
+{
+  "name": "@blockone/ual-eosio-reference-authenticator",
+  "version": "0.0.33",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": {
+    "name": "block.one",
+    "url": "https://block.one"
+  },
+  "contributors": [
+    "Nasser Abouelazm",
+    "Chris Allnutt",
+    "Randy Torres",
+    "Jeffrey Smith II",
+    "Tara Tritt"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "clean-build": "rm -rf dist && yarn build",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest",
+    "prepare": "yarn clean-build"
+  },
+  "dependencies": {
+    "@blockone/eosjs-ios-browser-signature-provider-interface": "^3.0.1-662e965.0",
+    "@blockone/eosjs-react-native-signature-provider-interface": "^4.0.1-61b0cbe.0",
+    "@blockone/eosjs-signature-provider-interface": "^6.0.0",
+    "@blockone/eosjs-window-message-signature-provider-interface": "^4.0.1",
+    "@blockone/universal-authenticator-library": "^0.0.33",
+    "bs58": "^4.0.1",
+    "eosjs": "^20.0.0-73152ad.0",
+    "text-encoding": "^0.7.0",
+    "uuid": "^3.3.2"
+  },
+  "jest": {
+    "verbose": false,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "@blockone/ios-browser-auth-signature-provider": "<rootDir>/__mocks__/ios-browser-auth-signature-provider.js"
+    },
+    "transform": {
+      "^.+\\.(tsx?)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "testRegex": "(/src/.*(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "@blockone/tslint-config-blockone": "^1.0.0",
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOSIO/ual-eosio-reference-authenticator.git"
+  }
+}
