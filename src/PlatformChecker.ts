@@ -51,7 +51,8 @@ export class PlatformChecker {
 
   private get platform(): Platform {
     const isIOS = this.userAgent.includes('iPhone') || this.userAgent.includes('iPad')
-    if (isIOS) {
+    const isEmbeddedIOS = (window.webkit && window.webkit.messageHandlers)
+    if (isIOS && !isEmbeddedIOS) {
       return Platform.IOS
     }
 
