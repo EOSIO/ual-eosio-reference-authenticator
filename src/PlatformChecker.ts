@@ -50,6 +50,13 @@ export class PlatformChecker {
   }
 
   private get platform(): Platform {
+    const isLynxBrowser = this.userAgent.toLowerCase().includes('eoslynx')
+    const isGetDeviceId = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.getDeviceId
+    const isTPBrowser = !!(window.TPJSBrigeClient || isGetDeviceId)
+    if (isLynxBrowser || isTPBrowser) {
+      return Platform.NOT_SUPPORTED
+    }
+
     const isIOS = this.userAgent.includes('iPhone') || this.userAgent.includes('iPad')
     if (isIOS) {
       return Platform.IOS

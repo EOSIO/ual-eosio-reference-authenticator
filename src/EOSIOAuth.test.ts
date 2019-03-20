@@ -5,6 +5,28 @@ import { EOSIOAuthUser } from './EOSIOAuthUser'
 import { PlatformChecker } from './PlatformChecker'
 import { UALEOSIOAuthError } from './UALEOSIOAuthError'
 
+declare var window: any
+
+//Make userAgent mutable for testing
+Object.defineProperty(window.navigator, 'userAgent', ((_value) => {
+  return {
+    get: () => _value,
+    set: (v) => {
+        _value = v;
+    }
+  };
+})(window.navigator.userAgent))
+
+// //Make webkit mutable for testing
+// Object.defineProperty(window, 'webkit', ((_value) => {
+//   return {
+//     get: () => _value,
+//     set: (v) => {
+//         _value = v;
+//     }
+//   };
+// })(window.navigator.userAgent))
+
 describe('EOSIOAuth', () => {
   let chain: Chain
   let eosioAuth: EOSIOAuth
@@ -55,6 +77,22 @@ describe('EOSIOAuth', () => {
 
     it('with an error if authenticator is unavailable', async () => {
       PlatformChecker.prototype.isSupportedPlatform = jest.fn().mockReturnValue(false)
+      await eosioAuth.init()
+      expect(eosioAuth.isErrored()).toEqual(true)
+    })
+
+    it('with an error if authenticator is loaded within the Token Pocket browser', async () => {
+      window.webkit = {
+        messageHandlers: {
+          getDeviceId: true
+        }
+      }
+      await eosioAuth.init()
+      expect(eosioAuth.isErrored()).toEqual(true)
+    })
+
+    it('with an error if authenticator is loaded within the EOSLynx browser', async () => {
+      window.navigator.userAgent = 'EOSLynx IOS'
       await eosioAuth.init()
       expect(eosioAuth.isErrored()).toEqual(true)
     })
