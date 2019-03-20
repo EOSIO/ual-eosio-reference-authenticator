@@ -17,16 +17,6 @@ Object.defineProperty(window.navigator, 'userAgent', ((_value) => {
   };
 })(window.navigator.userAgent))
 
-// //Make webkit mutable for testing
-// Object.defineProperty(window, 'webkit', ((_value) => {
-//   return {
-//     get: () => _value,
-//     set: (v) => {
-//         _value = v;
-//     }
-//   };
-// })(window.navigator.userAgent))
-
 describe('EOSIOAuth', () => {
   let chain: Chain
   let eosioAuth: EOSIOAuth
