@@ -54,13 +54,13 @@ const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App' })
     
 ## Contributing
 
-[Contributing Guide](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/develop/CONTRIBUTING.md)
+[Contributing Guide](./CONTRIBUTING.md)
 
-[Code of Conduct](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/develop/CONTRIBUTING.md#conduct)
+[Code of Conduct](./CONTRIBUTING.md#conduct)
 
 ## License
 
-[MIT](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/develop/LICENSE)
+[MIT](./LICENSE)
 
 ## Important
 
