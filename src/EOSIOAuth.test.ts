@@ -1,4 +1,4 @@
-import { Chain, User } from '@blockone/universal-authenticator-library'
+import { Chain, User } from 'universal-authenticator-library'
 
 import { EOSIOAuth } from './EOSIOAuth'
 import { EOSIOAuthUser } from './EOSIOAuthUser'
