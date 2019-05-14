@@ -5,7 +5,7 @@ import {
   UALError,
   UALErrorType,
   User
-} from '@blockone/universal-authenticator-library'
+} from 'universal-authenticator-library'
 
 import { EOSIOAuthUser } from './EOSIOAuthUser'
 import { eosioLogo } from './eosioLogo'
@@ -54,6 +54,7 @@ export class EOSIOAuth extends Authenticator {
 
   public reset(): void {
     this.initError = null
+    // tslint:disable-next-line:no-floating-promises
     this.init()
   }
 

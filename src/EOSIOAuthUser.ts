@@ -1,6 +1,6 @@
 
 import { SignatureProviderInterface } from '@blockone/eosjs-signature-provider-interface'
-import { Chain, SignTransactionResponse, UALErrorType, User } from '@blockone/universal-authenticator-library'
+import { Chain, SignTransactionResponse, UALErrorType, User } from 'universal-authenticator-library'
 import * as bs58 from 'bs58'
 import { Api, JsonRpc } from 'eosjs'
 import {
