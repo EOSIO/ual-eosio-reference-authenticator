@@ -19,5 +19,6 @@ export interface EOSIOAuthOptions {
   Linking?: any
   declaredDomain?: string
   securityExclusions?: SecurityExclusions
+  protocol?: string
   appName: string
 }

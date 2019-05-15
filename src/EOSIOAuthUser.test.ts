@@ -10,7 +10,7 @@ describe('EOSIOAuthUser', () => {
         port: 1234,
       }]
     }
-    const eosioAuthUser = new EOSIOAuthUser(chain, '')
+    const eosioAuthUser = new EOSIOAuthUser(chain, '', { appName: '', protocol: ''})
     await eosioAuthUser.init()
 
     expect(await eosioAuthUser.signTransaction({}, {broadcast: true})).toEqual({
