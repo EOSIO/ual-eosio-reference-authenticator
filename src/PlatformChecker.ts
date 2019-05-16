@@ -2,9 +2,6 @@ import {
   SignatureProvider as IOSSignatureProvider
 } from '@blockone/eosjs-ios-browser-signature-provider-interface'
 import {
-  SignatureProvider as RNSignatureProvider
-} from '@blockone/eosjs-react-native-signature-provider-interface'
-import {
   packEnvelope,
   SignatureProviderEnvelope,
   SignatureProviderResponseEnvelope,
@@ -26,7 +23,6 @@ declare const window: any
 enum Platform {
   IOS = 'ios',
   DESKTOP_CHROME = 'desktopChrome',
-  REACT_NATIVE = 'reactNative',
   NOT_SUPPORTED = 'notSupported'
 }
 
@@ -39,10 +35,6 @@ export class PlatformChecker {
   }
 
   public get declaredDomain(): string {
-    if (this.platform === Platform.REACT_NATIVE) {
-      return this.options.declaredDomain
-    }
-
     const browserUrl = window.location.href
     const arr = browserUrl.split('/')
     const declaredDomain = `${arr[0]}//${arr[2]}`
@@ -54,11 +46,6 @@ export class PlatformChecker {
     const isEmbeddedIOS = (window.webkit && window.webkit.messageHandlers)
     if (isIOS && !isEmbeddedIOS) {
       return Platform.IOS
-    }
-
-    const isReactNative = this.userAgent === Platform.REACT_NATIVE.toLowerCase()
-    if (isReactNative) {
-      return Platform.REACT_NATIVE
     }
 
     const isMobile =
@@ -80,10 +67,6 @@ export class PlatformChecker {
   }
 
   public async getReturnUrl(): Promise<string> {
-    if (this.platform === Platform.REACT_NATIVE) {
-      const returnURL = await this.options.Linking.getInitialURL()
-      return returnURL
-    }
     return window.location.href
   }
 
@@ -105,8 +88,6 @@ export class PlatformChecker {
       return IOSSignatureProvider
     case Platform.DESKTOP_CHROME:
       return ChromeSignatureProvider
-    case Platform.REACT_NATIVE:
-      return RNSignatureProvider
     default:
       return IOSSignatureProvider
     }
