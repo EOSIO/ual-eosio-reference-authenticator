@@ -55,7 +55,7 @@ The UAL EOSIO Reference Authenticator is currently supported on the following en
 * Chrome Desktop Browser - [EOSIO Reference Chrome Extension Authenticator App](https://github.com/EOSIO/eosio-reference-chrome-extension-authenticator-app)
   * Required option: `appName`
   * Optional option: `securityExclusions`
-  ```
+  ```javascript
   const securityExclusions = {
     addAssertToTransactions: false
   }
@@ -64,7 +64,7 @@ The UAL EOSIO Reference Authenticator is currently supported on the following en
 * iOS - [iOS Browser App](https://github.com/EOSIO/ios-browser-app)
   * Required options: `appName`, `protocol`
   * Optional option: `securityExclusions`
-  ```
+  ```javascript
   const securityExclusions = {
     addAssertToTransactions: false
   }
