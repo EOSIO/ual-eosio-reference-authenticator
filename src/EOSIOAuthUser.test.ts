@@ -114,16 +114,11 @@ describe('EOSIOAuthUser', () => {
   describe(('signTransaction'), () => {
     beforeEach(() => {
       transactMock = jest.fn().mockReturnValue({
-        wasBroadcast: true,
-        transactionId: 'abcd',
-        status: 'executed',
-        transaction: {
-          processed: {
-            receipt: {
-              status: 'executed'
-            }
-          },
-          transaction_id: 'abcd',
+        transaction_id: 'abcd',
+        processed: {
+          receipt: {
+            status: 'executed',
+          }
         }
       })
     })
@@ -143,7 +138,7 @@ describe('EOSIOAuthUser', () => {
             }
           },
           transaction_id: 'abcd',
-        },
+        }
       })
     })
   })

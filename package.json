@@ -39,9 +39,6 @@
       "tsx",
       "js"
     ],
-    "moduleNameMapper": {
-      "@blockone/ios-browser-auth-signature-provider": "<rootDir>/__mocks__/ios-browser-auth-signature-provider.js"
-    },
     "transform": {
       "^.+\\.(tsx?)$": "ts-jest"
     },
