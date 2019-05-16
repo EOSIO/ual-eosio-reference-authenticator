@@ -1,6 +1,6 @@
 # UAL for EOSIO Reference Authenticator
 
-This authenticator is meant to be used with [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library)
+This authenticator is meant to be used with [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
 
 ![EOSIO Labs](https://img.shields.io/badge/EOSIO-Labs-5cb3ff.svg)
 
