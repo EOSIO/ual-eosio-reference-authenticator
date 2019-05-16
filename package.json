@@ -1,6 +1,6 @@
 {
   "name": "@blockone/ual-eosio-reference-authenticator",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -39,9 +39,6 @@
       "tsx",
       "js"
     ],
-    "moduleNameMapper": {
-      "@blockone/ios-browser-auth-signature-provider": "<rootDir>/__mocks__/ios-browser-auth-signature-provider.js"
-    },
     "transform": {
       "^.+\\.(tsx?)$": "ts-jest"
     },
