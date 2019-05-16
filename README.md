@@ -50,7 +50,7 @@ const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App' })
 
 ## Supported Environments
 
-The UAL EOSIO Reference Authenticator is currently supported on the following environments and their required [options](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/develop/src/interfaces.ts#L17) are listed below:
+The UAL EOSIO Reference Authenticator is currently supported on the following environments and their required [options](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/master/src/interfaces.ts#L18) are listed below:
 
 * Chrome Desktop Browser - [EOSIO Reference Chrome Extension Authenticator App](https://github.com/EOSIO/eosio-reference-chrome-extension-authenticator-app)
   * Required option: `appName`
