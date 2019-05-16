@@ -33,7 +33,7 @@ describe('EOSIOAuth', () => {
       expect(eosioAuth.shouldRender()).toEqual(true)
     })
 
-    it ('false if authenticator does not have platform support', () => {
+    it('false if authenticator does not have platform support', () => {
       PlatformChecker.prototype.isSupportedPlatform = jest.fn().mockReturnValue(false)
       expect(eosioAuth.shouldRender()).toEqual(false)
     })

@@ -23,7 +23,7 @@ export class EOSIOAuth extends Authenticator {
   /**
    * EOSIO Reference Authenticator Constructor
    * @param chains
-   * @param options { linking?, declaredDomain?, appName }
+   * @param options
    */
   constructor(chains: Chain[], options?: EOSIOAuthOptions) {
     super(chains, options)

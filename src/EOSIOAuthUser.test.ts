@@ -171,9 +171,9 @@ describe('EOSIOAuthUser', () => {
 
     it('throws a Signing Error if an error is thrown while attempting to sign the transaction with eosjs Api', async (done) => {
       transactMock.mockImplementation(() => { throw new Error('Unable to sign') })
-      const transactionConfig = { broadcast: false, blocksBehind: 6, expireSeconds: 90 }
+
       try {
-        await eosioAuthUser.signTransaction(transaction, transactionConfig)
+        await eosioAuthUser.signTransaction(transaction, {})
       } catch (error) {
         expect(error.type).toEqual(UALErrorType.Signing)
         done()
@@ -183,9 +183,8 @@ describe('EOSIOAuthUser', () => {
     it('throws a Signing Error with an Initialization Error as the cause if the eosjs Api is not initialized', async (done) => {
       eosioAuthUser = new EOSIOAuthUser(chain, 'testAccount')
 
-      const transactionConfig = { broadcast: false, blocksBehind: 6, expireSeconds: 90 }
       try {
-        await eosioAuthUser.signTransaction(transaction, transactionConfig)
+        await eosioAuthUser.signTransaction(transaction, {})
       } catch (error) {
         expect(error.type).toEqual(UALErrorType.Signing)
         expect(error.cause.type).toEqual(UALErrorType.Initialization)
