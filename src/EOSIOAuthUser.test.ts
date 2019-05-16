@@ -1,4 +1,4 @@
-import { Chain } from 'universal-authenticator-library'
+import { Chain, UALErrorType } from 'universal-authenticator-library'
 import { Api, JsonRpc } from 'eosjs'
 
 import { EOSIOAuthUser } from './EOSIOAuthUser'
@@ -112,7 +112,9 @@ describe('EOSIOAuthUser', () => {
   })
 
   describe(('signTransaction'), () => {
-    beforeEach(() => {
+    let transaction
+
+    beforeEach(async () => {
       transactMock = jest.fn().mockReturnValue({
         transaction_id: 'abcd',
         processed: {
@@ -121,11 +123,36 @@ describe('EOSIOAuthUser', () => {
           }
         }
       })
+
+      transaction = {
+        actions: [{
+          account: 'example',
+          name: 'test',
+          authorization: [{
+            actor: 'test',
+            permission: 'active',
+          }]
+        }],
+      }
+
+      await eosioAuthUser.init()
+    })
+
+    it('calls eosjs Api with the transaction and transaction configuration if given', async () => {
+      const transactionConfig = { broadcast: false, blocksBehind: 6, expireSeconds: 90 }
+      await eosioAuthUser.signTransaction(transaction, transactionConfig)
+  
+      expect(transactMock).toHaveBeenCalledWith(transaction,  transactionConfig)
+    })
+
+    it('calls eosjs Api with the transaction and default configuration if none given', async () => {
+      await eosioAuthUser.signTransaction(transaction, {})
+  
+      expect(transactMock).toHaveBeenCalledWith(transaction,  { broadcast: true, blocksBehind: 3, expireSeconds: 30 })
     })
 
     it('signs transactions', async () => {
-      await eosioAuthUser.init()
-      const transactionResponse = await eosioAuthUser.signTransaction({}, {broadcast: true})
+      const transactionResponse = await eosioAuthUser.signTransaction(transaction, { broadcast: true })
   
       expect(transactionResponse).toEqual({
         wasBroadcast: true,
@@ -140,6 +167,30 @@ describe('EOSIOAuthUser', () => {
           transaction_id: 'abcd',
         }
       })
+    })
+
+    it('throws a Signing Error if an error is thrown while attempting to sign the transaction with eosjs Api', async (done) => {
+      transactMock.mockImplementation(() => { throw new Error('Unable to sign') })
+      const transactionConfig = { broadcast: false, blocksBehind: 6, expireSeconds: 90 }
+      try {
+        await eosioAuthUser.signTransaction(transaction, transactionConfig)
+      } catch (error) {
+        expect(error.type).toEqual(UALErrorType.Signing)
+        done()
+      }
+    })
+
+    it('throws a Signing Error with an Initialization Error as the cause if the eosjs Api is not initialized', async (done) => {
+      eosioAuthUser = new EOSIOAuthUser(chain, 'testAccount')
+
+      const transactionConfig = { broadcast: false, blocksBehind: 6, expireSeconds: 90 }
+      try {
+        await eosioAuthUser.signTransaction(transaction, transactionConfig)
+      } catch (error) {
+        expect(error.type).toEqual(UALErrorType.Signing)
+        expect(error.cause.type).toEqual(UALErrorType.Initialization)
+        done()
+      }
     })
   })
 })
