@@ -10,7 +10,7 @@ EOSIO Labs repositories are experimental.  Developers in the community are encou
 
 ## Getting Started
 
-`yarn add @blockone/ual-eosio-reference-authenticator`
+`yarn add ual-eosio-reference-authenticator`
 
 #### Dependencies
 
@@ -18,16 +18,16 @@ EOSIO Labs repositories are experimental.  Developers in the community are encou
 
 * You must use one of the UAL renderers below.
 
-  * React - `@blockone/ual-reactjs-renderer`
+  * React - `ual-reactjs-renderer`
 
-  * PlainJS - `@blockone/ual-plainjs-renderer`
+  * PlainJS - `ual-plainjs-renderer`
 
 
 #### Basic Usage with React
 
 ```javascript
-import { EOSIOAuth } from '@blockone/ual-eosio-reference-authenticator'
-import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
+import { EOSIOAuth } from 'ual-eosio-reference-authenticator'
+import { UALProvider, withUAL } from 'ual-reactjs-renderer'
 
 const exampleNet = {
   chainId: '',
@@ -61,7 +61,7 @@ The UAL EOSIO Reference Authenticator is currently supported on the following en
   }
   const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App', securityExclusions })
   ```
-* iOS - [iOS Browser App](https://github.com/EOSIO/ios-browser-app)
+* iOS - [EOSIO Reference iOS Authenticator App](https://github.com/EOSIO/eosio-reference-ios-authenticator-app)
   * Required options: `appName`, `protocol`
   * Optional option: `securityExclusions`
   ```javascript
