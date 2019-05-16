@@ -1,6 +1,6 @@
 # UAL for EOSIO Reference Authenticator
 
-This authenticator is meant to be used with [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library)
+This authenticator is meant to be used with [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
 
 ![EOSIO Labs](https://img.shields.io/badge/EOSIO-Labs-5cb3ff.svg)
 
@@ -8,13 +8,9 @@ This authenticator is meant to be used with [Universal Authenticator Library](ht
 
 EOSIO Labs repositories are experimental.  Developers in the community are encouraged to use EOSIO Labs repositories as the basis for code and concepts to incorporate into their applications. Community members are also welcome to contribute and further develop these repositories. Since these repositories are not supported by Block.one, we may not provide responses to issue reports, pull requests, updates to functionality, or other requests from the community, and we encourage the community to take responsibility for these.
 
-## Supported Environments
-
-* The UAL EOSIO Reference Authenticator is currently supported on the Chrome desktop browser for use with the [EOSIO Reference Chrome Extension Authenticator App](https://github.com/EOSIO/eosio-reference-chrome-extension-authenticator-app).
-
 ## Getting Started
 
-`yarn add @blockone/ual-eosio-reference-authenticator`
+`yarn add ual-eosio-reference-authenticator`
 
 #### Dependencies
 
@@ -22,16 +18,16 @@ EOSIO Labs repositories are experimental.  Developers in the community are encou
 
 * You must use one of the UAL renderers below.
 
-  * React - `@blockone/ual-reactjs-renderer`
+  * React - `ual-reactjs-renderer`
 
-  * PlainJS - `@blockone/ual-plainjs-renderer`
+  * PlainJS - `ual-plainjs-renderer`
 
 
 #### Basic Usage with React
 
 ```javascript
-import { EOSIOAuth } from '@blockone/ual-eosio-reference-authenticator'
-import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
+import { EOSIOAuth } from 'ual-eosio-reference-authenticator'
+import { UALProvider, withUAL } from 'ual-reactjs-renderer'
 
 const exampleNet = {
   chainId: '',
@@ -51,7 +47,30 @@ const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App' })
   <AppWithUAL />
 </UALProvider>
 ```
-    
+
+## Supported Environments
+
+The UAL EOSIO Reference Authenticator is currently supported on the following environments and their required [options](https://github.com/EOSIO/ual-eosio-reference-authenticator/blob/master/src/interfaces.ts#L18) are listed below:
+
+* Chrome Desktop Browser - [EOSIO Reference Chrome Extension Authenticator App](https://github.com/EOSIO/eosio-reference-chrome-extension-authenticator-app)
+  * Required option: `appName`
+  * Optional option: `securityExclusions`
+  ```javascript
+  const securityExclusions = {
+    addAssertToTransactions: false
+  }
+  const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App', securityExclusions })
+  ```
+* iOS - [EOSIO Reference iOS Authenticator App](https://github.com/EOSIO/eosio-reference-ios-authenticator-app)
+  * Required options: `appName`, `protocol`
+  * Optional option: `securityExclusions`
+  ```javascript
+  const securityExclusions = {
+    addAssertToTransactions: false
+  }
+  const eosioAuth = new EOSIOAuth([exampleNet], { appName: 'Example App', protocol: 'eosio', securityExclusions })
+  ```
+
 ## Contributing
 
 [Contributing Guide](./CONTRIBUTING.md)
