@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@blockone/eosjs-ios-browser-signature-provider-interface": "^3.0.2",
-    "@blockone/eosjs-react-native-signature-provider-interface": "^4.0.2",
     "@blockone/eosjs-signature-provider-interface": "^6.0.1",
     "@blockone/eosjs-window-message-signature-provider-interface": "^4.0.2",
     "bs58": "^4.0.1",
