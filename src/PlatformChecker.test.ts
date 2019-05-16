@@ -30,12 +30,6 @@ describe('PlatformChecker', () => {
       expect(platformChecker.isSupportedPlatform()).toEqual(true)
     })
 
-    it('returns true for react native', () => {
-      window.navigator.userAgent = 'reactnative'
-      const platformChecker = new PlatformChecker()
-      expect(platformChecker.isSupportedPlatform()).toEqual(true)
-    })
-
     it('returns false for android', () => {
       window.navigator.userAgent = 'Android'
       const platformChecker = new PlatformChecker()

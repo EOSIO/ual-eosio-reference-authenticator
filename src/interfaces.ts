@@ -2,6 +2,7 @@ import {
   ErrorResponse,
   SignatureProviderInterface,
   SignatureProviderInterfaceParams,
+  SecurityExclusions,
 } from '@blockone/eosjs-signature-provider-interface'
 
 export const Name = 'EOSIO Auth'
@@ -17,5 +18,7 @@ export interface PendingRequest {
 export interface EOSIOAuthOptions {
   Linking?: any
   declaredDomain?: string
+  securityExclusions?: SecurityExclusions
+  protocol?: string
   appName: string
 }

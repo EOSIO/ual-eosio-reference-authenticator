@@ -46,6 +46,7 @@ export class EOSIOAuthUser extends User {
     this.signatureProvider = new SignatureProvider({
       declaredDomain,
       returnUrl,
+      ...(this.options && this.options.securityExclusions && { securityExclusions: this.options.securityExclusions }),
       options: this.options
     })
     const rpcEndpoint = this.chain.rpcEndpoints[0]
