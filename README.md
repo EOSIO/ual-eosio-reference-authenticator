@@ -1,6 +1,6 @@
 # UAL for EOSIO Reference Authenticator
 
-This authenticator is meant to be used with [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
+This authenticator is meant to be used with the [EOSIO Reference Authenticator Apps](#supported-environments) and the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
 
 ![EOSIO Labs](https://img.shields.io/badge/EOSIO-Labs-5cb3ff.svg)
 
@@ -14,7 +14,7 @@ EOSIO Labs repositories are experimental.  Developers in the community are encou
 
 #### Dependencies
 
-* All apps must follow the [Manifest Spec](https://github.com/EOSIO/manifest-spec)
+* All apps must follow the [Manifest Specification](https://github.com/EOSIO/manifest-spec)
 
 * You must use one of the UAL renderers below.
 
