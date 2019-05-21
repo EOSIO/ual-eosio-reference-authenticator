@@ -18,29 +18,29 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@blockone/eosjs-ios-browser-signature-provider-interface@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@blockone/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-3.0.2.tgz#c64c4330cdb7c69ee129f931fa1a9065fe302d9c"
-  integrity sha512-s79QysL30O0kWYRdKTJbjTJViTYXQjX735P5+Xlg51Nj0+RB1h5YoS5oRwRiuzJy08g+y52YWfNea4/DXmnkuQ==
+"@blockone/eosjs-ios-browser-signature-provider-interface@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@blockone/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-3.0.3.tgz#b96de9833d4fe743d77f2cd5a224506a96e7cb24"
+  integrity sha512-uQxtUOPpVTqOrQkMSxI3kkru1r3hZ8UVbks16HH3jWaxxZyzahN6Vmx4EPA9/ADDQg1P3fd5D6kb7/ESZhD0Aw==
   dependencies:
-    "@blockone/eosjs-signature-provider-interface" "^6.0.1"
+    "@blockone/eosjs-signature-provider-interface" "^7.0.0"
     qs "^6.5.2"
     uuid "^3.3.2"
 
-"@blockone/eosjs-signature-provider-interface@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@blockone/eosjs-signature-provider-interface/-/eosjs-signature-provider-interface-6.0.1.tgz#7b02da70fbd859e6c67d59c9fd7bb3fa6529b717"
-  integrity sha512-WarK4di9hSgJMVvWSJQu8BM2X1DQpyncfoIvfSGYZsmpItfBd2F1O4+9hNhTY4IXPcnqP8ExbufVFGTLd3OFYg==
+"@blockone/eosjs-signature-provider-interface@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@blockone/eosjs-signature-provider-interface/-/eosjs-signature-provider-interface-7.0.0.tgz#d9827bb4caf71e3ab933ea9ffab16ddaa54271c5"
+  integrity sha512-tRlWOwDI268t0OUY9b2k1/QbiQynx5Z2iBuWO82/dxaMYNYHAjVkwCVmLM3p2OOUFctbMVPQOgxVRACAhKKzoQ==
   dependencies:
-    eosjs "20.0.0-8b096ed.0"
+    eosjs "^20.0.0"
     uuid "^3.3.2"
 
-"@blockone/eosjs-window-message-signature-provider-interface@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@blockone/eosjs-window-message-signature-provider-interface/-/eosjs-window-message-signature-provider-interface-4.0.2.tgz#98366f9c57078ebbdf9c97e646e44c4d466a91fe"
-  integrity sha512-Zslomb+ArMNEUSvGff1kP6nB90CqrTPNGmr0QV3bOGXBxK5O31LlIVWPxmyHybl8R94O1MNPim5dK9cWyUs2WQ==
+"@blockone/eosjs-window-message-signature-provider-interface@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@blockone/eosjs-window-message-signature-provider-interface/-/eosjs-window-message-signature-provider-interface-4.0.3.tgz#9f64c9670e3f5f79569e2e5edd7ca7b28ddb8c4a"
+  integrity sha512-xjUlSUSoOM92syKvm7DT1Dob25hss3JvSdlIKWnQiBgbda5wmzNK9K1yb51V6GcZg3htEp5nioejRrEREbVGMg==
   dependencies:
-    "@blockone/eosjs-signature-provider-interface" "^6.0.1"
+    "@blockone/eosjs-signature-provider-interface" "^7.0.0"
 
 "@blockone/tslint-config-blockone@^4.0.0":
   version "4.0.0"
@@ -50,7 +50,7 @@
     tslint "^5.11.0"
     tslint-eslint-rules "^5.4.0"
 
-"@types/jest@^23.3.1", "@types/jest@^23.3.10":
+"@types/jest@^23.3.10":
   version "23.3.13"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.13.tgz#c81484b6f4ca007bb09887ed15ecb3286d58f928"
   integrity sha512-ePl4l+7dLLmCucIwgQHAgjiepY++qcI6nb8eAwGNkB6OxmTe3Z9rQU3rSpomqu42PCCnlThZbOoxsf+qylJsLA==
@@ -930,7 +930,7 @@ ecurve@^1.0.5:
     bigi "^1.1.0"
     safe-buffer "^5.0.1"
 
-eosjs-ecc@4.0.4, eosjs-ecc@^4.0.1:
+eosjs-ecc@4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/eosjs-ecc/-/eosjs-ecc-4.0.4.tgz#431450f30a6f73088ff5d7ba1ebdfe967a5ca4ab"
   integrity sha512-9wAYefts4TidHOu+eN9nAisZdWpUzlUimZrB63oP7+/s4xRNJEn2Vvep2ICRODpxpidbshM1L7WaSYW9oiV5gA==
@@ -943,16 +943,6 @@ eosjs-ecc@4.0.4, eosjs-ecc@^4.0.1:
     create-hmac "^1.1.6"
     ecurve "^1.0.5"
     randombytes "^2.0.5"
-
-eosjs@20.0.0-8b096ed.0:
-  version "20.0.0-8b096ed.0"
-  resolved "https://registry.yarnpkg.com/eosjs/-/eosjs-20.0.0-8b096ed.0.tgz#8c30d5bc14a2a4f12826b200562c676a9439f113"
-  integrity sha512-ehiKHxqAxuSr1Eb+Duu8+ApiYWAM7Rh6/gGb1RHDuM/dgy4YCXTPfRenhNjkEI4u1XTqh1pxdpPrTd+xaHjvHQ==
-  dependencies:
-    "@types/jest" "^23.3.1"
-    babel-runtime "^6.26.0"
-    eosjs-ecc "^4.0.1"
-    text-encoding "^0.6.4"
 
 eosjs@^20.0.0:
   version "20.0.0"
@@ -3567,11 +3557,6 @@ text-encoding@0.7.0, text-encoding@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.7.0.tgz#f895e836e45990624086601798ea98e8f36ee643"
   integrity sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA==
-
-text-encoding@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.6.4.tgz#e399a982257a276dae428bb92845cb71bdc26d19"
-  integrity sha1-45mpgiV6J22uQou5KEXLcb3CbRk=
 
 throat@^4.0.0:
   version "4.1.0"
