@@ -18,23 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@blockone/eosjs-ios-browser-signature-provider-interface@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@blockone/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-3.0.3.tgz#b96de9833d4fe743d77f2cd5a224506a96e7cb24"
-  integrity sha512-uQxtUOPpVTqOrQkMSxI3kkru1r3hZ8UVbks16HH3jWaxxZyzahN6Vmx4EPA9/ADDQg1P3fd5D6kb7/ESZhD0Aw==
-  dependencies:
-    "@blockone/eosjs-signature-provider-interface" "^7.0.0"
-    qs "^6.5.2"
-    uuid "^3.3.2"
-
-"@blockone/eosjs-signature-provider-interface@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@blockone/eosjs-signature-provider-interface/-/eosjs-signature-provider-interface-7.0.0.tgz#d9827bb4caf71e3ab933ea9ffab16ddaa54271c5"
-  integrity sha512-tRlWOwDI268t0OUY9b2k1/QbiQynx5Z2iBuWO82/dxaMYNYHAjVkwCVmLM3p2OOUFctbMVPQOgxVRACAhKKzoQ==
-  dependencies:
-    eosjs "^20.0.0"
-    uuid "^3.3.2"
-
 "@blockone/tslint-config-blockone@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@blockone/tslint-config-blockone/-/tslint-config-blockone-4.0.0.tgz#34ce165e7223acff5811f4bbae66290160c4bf56"
@@ -936,6 +919,15 @@ eosjs-ecc@4.0.4:
     create-hmac "^1.1.6"
     ecurve "^1.0.5"
     randombytes "^2.0.5"
+
+eosjs-ios-browser-signature-provider-interface@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-0.1.0.tgz#45217a9ae3366c4b2c7b417184c22abbb4e6403b"
+  integrity sha512-LJgnswN/0XgXuhz6ILwYibFE7szVNGPIo3i+zWKPpChvonVycplxgc0Wd+OheoJ5URcJwZ+GXncImCd2SqDOSw==
+  dependencies:
+    eosjs-signature-provider-interface "^0.1.0"
+    qs "^6.5.2"
+    uuid "^3.3.2"
 
 eosjs-signature-provider-interface@^0.1.0:
   version "0.1.0"

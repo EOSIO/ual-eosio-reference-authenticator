@@ -1,15 +1,15 @@
 import {
   SignatureProvider as IOSSignatureProvider
-} from '@blockone/eosjs-ios-browser-signature-provider-interface'
+} from 'eosjs-ios-browser-signature-provider-interface'
 import {
   packEnvelope,
   SignatureProviderEnvelope,
   SignatureProviderResponseEnvelope,
   unpackEnvelope,
-} from '@blockone/eosjs-signature-provider-interface'
+} from 'eosjs-signature-provider-interface'
 import {
   SignatureProvider as ChromeSignatureProvider
-} from '@blockone/eosjs-window-message-signature-provider-interface'
+} from 'eosjs-window-message-signature-provider-interface'
 import uuid from 'uuid'
 
 import {
