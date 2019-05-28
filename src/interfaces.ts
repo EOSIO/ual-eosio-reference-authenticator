@@ -3,7 +3,7 @@ import {
   SignatureProviderInterface,
   SignatureProviderInterfaceParams,
   SecurityExclusions,
-} from '@blockone/eosjs-signature-provider-interface'
+} from 'eosjs-signature-provider-interface'
 
 export const Name = 'EOSIO Auth'
 
