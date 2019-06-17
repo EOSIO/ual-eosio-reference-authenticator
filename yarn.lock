@@ -920,29 +920,29 @@ eosjs-ecc@4.0.4:
     ecurve "^1.0.5"
     randombytes "^2.0.5"
 
-eosjs-ios-browser-signature-provider-interface@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-0.1.0.tgz#45217a9ae3366c4b2c7b417184c22abbb4e6403b"
-  integrity sha512-LJgnswN/0XgXuhz6ILwYibFE7szVNGPIo3i+zWKPpChvonVycplxgc0Wd+OheoJ5URcJwZ+GXncImCd2SqDOSw==
+eosjs-ios-browser-signature-provider-interface@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eosjs-ios-browser-signature-provider-interface/-/eosjs-ios-browser-signature-provider-interface-0.1.1.tgz#7b1385f523f68635b17f7771150ecab3d85556c6"
+  integrity sha512-pTPhwwToJBOKq2PDEfxKiHrapcMM8n5OsNAXW5SDli4gvC351Hybt2oUVyZLZj0UZcPcydolcC0A59bs4kp/FQ==
   dependencies:
-    eosjs-signature-provider-interface "^0.1.0"
+    eosjs-signature-provider-interface "^0.1.1"
     qs "^6.5.2"
     uuid "^3.3.2"
 
-eosjs-signature-provider-interface@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eosjs-signature-provider-interface/-/eosjs-signature-provider-interface-0.1.0.tgz#7af358acffd6c38d3fe54c5574d399cc81908a0f"
-  integrity sha512-C6B1FYMqxgJFoZmKbyEsrmcBGp6Cip45oNAgJL3bUovV7KbGEzCGbZujzw7iNWnWYA5A7lothMoS6C4akOCMWg==
+eosjs-signature-provider-interface@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eosjs-signature-provider-interface/-/eosjs-signature-provider-interface-0.1.1.tgz#b91e7e4ac5ce5a6c37c93c49412291f22c30facf"
+  integrity sha512-6A3ecy1GExc+f2IVVHF7klEAUzSt3CvTg90CrfeqOhC/3XZS98v0faYtSAgWAE7SBsfGyMCASESmqPwelKpKDg==
   dependencies:
     eosjs "^20.0.0"
     uuid "^3.3.2"
 
-eosjs-window-message-signature-provider-interface@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eosjs-window-message-signature-provider-interface/-/eosjs-window-message-signature-provider-interface-0.1.0.tgz#bfb5f869f30f483c9607881138ed0080ec0d8d54"
-  integrity sha512-OWluBvdbVQ90+sq5uC9FsOLZ5y8AcVfWNc4Xc0eCB1Nkd1TxAq3QOWMollQdb0aTjRIxabPSOYmSEKRtGTApow==
+eosjs-window-message-signature-provider-interface@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eosjs-window-message-signature-provider-interface/-/eosjs-window-message-signature-provider-interface-0.1.1.tgz#2678e93a8481d1acf6aad9ae99d6b465d920b020"
+  integrity sha512-zw6634HvlbdEJ378wjk4AkDL8asMxVqBxNj8xpxajrZNZ3fAwUjZAEsn5sGe1PVLwDJ2VRGYe9IHua2nHuNzbg==
   dependencies:
-    eosjs-signature-provider-interface "^0.1.0"
+    eosjs-signature-provider-interface "^0.1.1"
 
 eosjs@^20.0.0:
   version "20.0.0"
@@ -3748,10 +3748,10 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
-universal-authenticator-library@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/universal-authenticator-library/-/universal-authenticator-library-0.1.0.tgz#187e6a85f43e75d4d76b66c228c9e4b59770d4af"
-  integrity sha512-45nl80BWf+9WA8vTMXunMicZmHPm4wWdxNnSlL65cCP4OjA1ra4IuH+T7+Ko3P6IfXSfS9+VNCuXai3fip+taA==
+universal-authenticator-library@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/universal-authenticator-library/-/universal-authenticator-library-0.1.1.tgz#6964e2628a73b12f3a657f176f014aca7f11f38c"
+  integrity sha512-2b7H52ISAh/zc+7x+GCYS5XW+NBuDMONXmRYDFk0524vSYZEiLUnbppfBW9qquV2qjLL181zBLRcvCzgAfAwGA==
 
 unset-value@^1.0.0:
   version "1.0.0"

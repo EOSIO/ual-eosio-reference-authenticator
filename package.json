@@ -1,6 +1,6 @@
 {
   "name": "ual-eosio-reference-authenticator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -18,17 +18,17 @@
     "build": "tsc --build tsconfig.json",
     "clean-build": "rm -rf dist && yarn build",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test": "jest",
-    "prepare": "yarn clean-build"
+    "prepublish": "yarn clean-build",
+    "test": "jest"
   },
   "dependencies": {
     "bs58": "^4.0.1",
     "eosjs": "^20.0.0",
-    "eosjs-ios-browser-signature-provider-interface": "^0.1.0",
-    "eosjs-signature-provider-interface": "^0.1.0",
-    "eosjs-window-message-signature-provider-interface": "^0.1.0",
+    "eosjs-ios-browser-signature-provider-interface": "^0.1.1",
+    "eosjs-signature-provider-interface": "^0.1.1",
+    "eosjs-window-message-signature-provider-interface": "^0.1.1",
     "text-encoding": "^0.7.0",
-    "universal-authenticator-library": "^0.1.0",
+    "universal-authenticator-library": "^0.1.1",
     "uuid": "^3.3.2"
   },
   "jest": {
