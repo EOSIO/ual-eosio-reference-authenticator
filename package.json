@@ -57,8 +57,8 @@
     "@blockone/tslint-config-blockone": "^4.0.0",
     "@types/jest": "^23.3.10",
     "@types/node": "^12.0.1",
-    "jest": "^23.6.0",
-    "ts-jest": "^23.10.5",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
   },
