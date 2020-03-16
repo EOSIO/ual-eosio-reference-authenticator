@@ -54,7 +54,7 @@ export class EOSIOAuth extends Authenticator {
 
   public reset(): void {
     this.initError = null
-    // tslint:disable-next-line:no-floating-promises
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     this.init()
   }
 
