@@ -16,10 +16,9 @@
     "Mike Manfredi"
   ],
   "scripts": {
-    "build": "tsc --build tsconfig.json",
-    "clean-build": "rm -rf dist && yarn build",
-    "lint": "tslint -c tslint.json -p tsconfig.json",
-    "prepublish": "yarn clean-build",
+    "build": "rm -rf dist && tsc --build tsconfig.json",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "prepare": "yarn build",
     "test": "jest"
   },
   "dependencies": {
@@ -55,13 +54,13 @@
     "testEnvironment": "jsdom"
   },
   "devDependencies": {
-    "@blockone/tslint-config-blockone": "^4.0.0",
-    "@types/jest": "^23.3.10",
-    "@types/node": "^12.0.1",
+    "@blockone/eslint-config-blockone": "^3.0.0",
+    "@types/jest": "^23.3.14",
+    "@types/node": "^12.12.30",
+    "eslint": "^6.8.0",
     "jest": "^24.9.0",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.11.0",
-    "typescript": "^3.2.2"
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.8.3"
   },
   "repository": {
     "type": "git",

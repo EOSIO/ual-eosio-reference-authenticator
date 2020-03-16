@@ -8,7 +8,7 @@ import {
   TextEncoder as NodeTextEncoder,
 } from 'text-encoding'
 
-const RIPEMD160 = require('eosjs/dist/ripemd').RIPEMD160.hash // tslint:disable-line
+const RIPEMD160 = require('eosjs/dist/ripemd').RIPEMD160.hash // eslint-disable-line
 
 import { EOSIOAuthOptions } from './interfaces'
 import { PlatformChecker } from './PlatformChecker'
