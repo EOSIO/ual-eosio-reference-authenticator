@@ -84,12 +84,12 @@ export class PlatformChecker {
 
   public getSupportedSignatureProvider(): SignatureProviderInterfaceClass {
     switch (this.platform) {
-    case Platform.IOS:
-      return IOSSignatureProvider
-    case Platform.DESKTOP_CHROME:
-      return ChromeSignatureProvider
-    default:
-      return IOSSignatureProvider
+      case Platform.IOS:
+        return IOSSignatureProvider
+      case Platform.DESKTOP_CHROME:
+        return ChromeSignatureProvider
+      default:
+        return IOSSignatureProvider
     }
   }
 

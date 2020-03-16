@@ -22,6 +22,7 @@ export class EOSIOAuth extends Authenticator {
 
   /**
    * EOSIO Reference Authenticator Constructor
+   *
    * @param chains
    * @param options
    */
@@ -43,7 +44,7 @@ export class EOSIOAuth extends Authenticator {
         throw new Error('Unable to detect authenticator')
       }
     } catch (e) {
-      const message = `Error occurred during initialization`
+      const message = 'Error occurred during initialization'
       const type = UALErrorType.Initialization
       const cause = e
       this.initError = new UALEOSIOAuthError(message, type, cause)
@@ -102,7 +103,7 @@ export class EOSIOAuth extends Authenticator {
       }
       this.users = []
     } catch (e) {
-      const message = `Error logging out`
+      const message = 'Error logging out'
       const type = UALErrorType.Logout
       const cause = e
       throw new UALEOSIOAuthError(message, type, cause)
