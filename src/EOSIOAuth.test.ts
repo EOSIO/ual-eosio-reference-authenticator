@@ -4,7 +4,7 @@ import { EOSIOAuth } from './EOSIOAuth'
 import { EOSIOAuthUser } from './EOSIOAuthUser'
 import { PlatformChecker } from './PlatformChecker'
 import { UALEOSIOAuthError } from './UALEOSIOAuthError'
-import { EOSIOAuthOptions } from './interfaces'
+import { EOSIOAuthOptions, Name } from './interfaces'
 
 describe('EOSIOAuth', () => {
   let chain: Chain
@@ -88,7 +88,7 @@ describe('EOSIOAuth', () => {
     })
 
     beforeEach(async () => {
-      users = await eosioAuth.login() 
+      users = await eosioAuth.login()
     })
 
     it('calls cleanUp on the active user\'s signatureProvider', async () => {
@@ -121,6 +121,13 @@ describe('EOSIOAuth', () => {
       const spy = jest.spyOn(eosioAuth, 'init')
       eosioAuth.reset()
       expect(spy).toHaveBeenCalled()
+    })
+  })
+
+  describe('get authenticator name', () => {
+    it('should be able to get authenticator name', () => {
+      eosioAuth = new EOSIOAuth([chain], options)
+      expect(eosioAuth.getName()).toBe(Name)
     })
   })
 })
